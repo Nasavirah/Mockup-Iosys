@@ -31,6 +31,25 @@
     }
   });
 
+  // tabs
+  $('.tabLink').click( function() {
+	
+    var tabID = $(this).attr('data-tab');
+    
+    $(this).addClass('active').siblings().removeClass('active');
+    
+    $('#tab-'+tabID).addClass('active').siblings().removeClass('active');
+  });
+
+  $('.tab123').click( function() {
+	
+    var tabsID = $(this).attr('datas-tabs');
+    
+    $(this).addClass('active').siblings().removeClass('active');
+    
+    $('#tabs-'+tabsID).addClass('active').siblings().removeClass('active');
+  });
+
   // Mobile menu dropdown
   $(".submenu").on("click", function() {
     var width = $(window).width();
@@ -241,4 +260,5 @@
       }
     );
   });
+  
 })(window.jQuery);
